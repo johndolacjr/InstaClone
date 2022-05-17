@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import FirebaseContext from './context/firebase';
+import { firebase, fieldValue } from './lib/firebase';
+import'./styles/app.css';
+// import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(
+<firebaseContext.Provider value={{ firebase, FieldValue }}>
+  <App />
+  </firebaseContext.Provider>, 
+  document.getElementById('root')
+  );
